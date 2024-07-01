@@ -24,7 +24,7 @@ model Car {
   bought Boolean @default(false)
   name   String
   userId String  @unique
-  User   User    @relation(fields: [userId], references: [id])
+  User   User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model CarBlog {
